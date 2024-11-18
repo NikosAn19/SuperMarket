@@ -5,22 +5,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
 import Entities.User;
-import UserPanels.AdminPanel;
 
 public class MainFrame extends JFrame {
     private User currentUser; // Αποθήκευση του τρέχοντος χρήστη
 
     public MainFrame() {
-        // Ο κώδικας για το UI του MainFrame
+    
         initUI();
     }
     public void initUI() {
         setTitle("Login Form");
-        setSize(1250, 750);  // Ορισμός μεγέθους παραθύρου
+        setSize(1250, 750); 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);  // Στοίχιση στο κέντρο της οθόνης
+        setLocationRelativeTo(null);  
 
-        // Δημιουργία και προσθήκη της φόρμας στο JFrame
+        // Δημιουργία και προσθήκη της φόρμας 
         LoginForm loginForm = new LoginForm();
 
         // Χρήση GridBagLayout για τη φόρμα
@@ -34,7 +33,7 @@ public class MainFrame extends JFrame {
         gbc.gridwidth = 2;  // Η φόρμα καλύπτει 2 στήλες για να είναι κεντραρισμένη
         add(loginForm, gbc);
 
-        // Ορισμός του ActionListener για το κουμπί
+        
         loginForm.setSubmitActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -57,12 +56,6 @@ public class MainFrame extends JFrame {
         });
     }
 
-    private void showAdminPanel() {
-        AdminPanel adminPanel = new AdminPanel(currentUser);
-        setContentPane(adminPanel);
-        revalidate();
-        repaint();
-    }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
