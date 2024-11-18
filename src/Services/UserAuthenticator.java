@@ -9,7 +9,7 @@ public class UserAuthenticator {
     // Μέθοδος για να ελέγξουμε τον χρήστη στο αρχείο
     public static String authenticateUser(String username, char[] password) {
         String line;
-        String filePath = "src/DB/users.txt"; // Σχετικός δρόμος προς το αρχείο
+        String filePath = "src/DB/users.txt"; 
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             while ((line = br.readLine()) != null) {
