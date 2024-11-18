@@ -27,17 +27,17 @@ public class LoginForm extends JPanel {
 
         // Δημιουργία στοιχείων φόρμας
         JLabel userLabel = new JLabel("Username:");
-        userText = new JTextField(20);  // Ορίζουμε μέγεθος 20 για το πεδίο κειμένου
+        userText = new JTextField(20);  
 
         JLabel passwordLabel = new JLabel("Password:");
-        passwordText = new JPasswordField(20);  // Ορίζουμε μέγεθος 20 για το πεδίο κωδικού
+        passwordText = new JPasswordField(20); 
 
         submitButton = new JButton("Submit");
 
         // Προσθήκη του πρώτου label και του πεδίου εισαγωγής (Username)
         gbc.gridx = 0;
         gbc.gridy = 1;
-        gbc.gridwidth = 1; // Επαναφορά σε 1 στήλη
+        gbc.gridwidth = 1;
         add(userLabel, gbc);
         gbc.gridx = 1;
         add(userText, gbc);
